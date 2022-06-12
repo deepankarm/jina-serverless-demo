@@ -4,7 +4,9 @@
 
 From [wikipedia](https://en.wikipedia.org/wiki/Serverless_computing)
 
-> Serverless computing is a cloud computing execution model in which the cloud provider allocates machine resources on demand, taking care of the servers on behalf of their customers. "Serverless" is a misnomer in the sense that servers are still used by cloud service providers to execute code for developers. However, developers of serverless applications are not concerned with capacity planning, configuration, management, maintenance, fault tolerance, or scaling of containers, VMs, or physical servers.
+> Serverless computing is a cloud computing execution model in which the cloud provider allocates machine resources on demand, taking care of the servers on behalf of their customers. 
+> 
+> "Serverless" is a misnomer in the sense that servers are still used by cloud service providers to execute code for developers. However, developers of serverless applications are not concerned with capacity planning, configuration, management, maintenance, fault tolerance, or scaling of containers, VMs, or physical servers.
 
 ## Why do we care?
 
@@ -13,9 +15,13 @@ From [wikipedia](https://en.wikipedia.org/wiki/Serverless_computing)
 - Enables pay-per-use model of pricing.
 - Serverless allows invocations to be "event-driven". Though this demo only shows the event to be triggered by `jina.Client`, we can build different integrations where any [Cloudevent](https://cloudevents.io/) can possibly be converted into a `jina.Client` request.
 
+## What is this demo about?
+
+We'll use [Knative serving](https://knative.dev/docs/) along with [Linkerd service mesh](https://linkerd.io/2.11/overview/) & show how simple it is to enable autoscaling (from 0 to N) in Jina.
+
 ## Why Knative?
 
-- Knative allows us to scale from 0 to N, based on.
+Knative allows us to scale from 0 to N, based on.
   - `number of simultaneous requests per replica` ([concurrency](https://knative.dev/docs/serving/autoscaling/concurrency/)) or
   - `requests-per-second per replica` ([rps](https://knative.dev/docs/serving/autoscaling/rps-target/))
   - We can set min/max replicas per deployment.
