@@ -85,7 +85,7 @@ http://gateway.jina-sls.127.0.0.1.sslip.io
 Before any Client sends requests to the Gateway, let's check & wait until each deployment has 0 replicas.
 
 <p align="center">
-<a href="#"><img src="./.github/before.png" alt="0 replicas" width="100%"></a>
+<a href="#"><img src="./.github/before.png" alt="0 replicas" width="60%"></a>
 </p>
 
 ### Let's send requests to the Flow that doesn't exist!
