@@ -78,8 +78,8 @@ kubectl apply -R -f $(python kn/change_to_kn.py jina-sls)
 We might need to wait a bit until all knative objects are setup in addition to the deployments in `jina-sls` namespace. To check the URL of the gateway, you can use the following command.
 
 ```bash
-GATEWAY=$(kubectl get ksvc -n jina-sls gateway --no-headers -o custom-columns="URL:.status.url")
-echo -e "Flow Gateway is $GATEWAY"
+$ kubectl get ksvc -n jina-sls gateway --no-headers -o custom-columns="URL:.status.url" 
+http://gateway.jina-sls.127.0.0.1.sslip.io
 ```
 
 Before any Client sends requests to the Gateway, let's check & wait until each deployment has 0 replicas.
