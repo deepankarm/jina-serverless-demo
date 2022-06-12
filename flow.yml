@@ -1,0 +1,4 @@
+jtype: Flow
+executors:
+  - name: heavy_executor
+    uses: jinahub+docker://HeavyExecutor

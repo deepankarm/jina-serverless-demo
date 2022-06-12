@@ -58,7 +58,7 @@ kubectl annotate ns kourier-system knative-serving default linkerd.io/inject=ena
 
 for namespace in "${namespaces[@]}"; do
   kubectl rollout restart deploy -n ${namespace}
-  for deployment in $(kubectl get deployments -n ${namespace} -o custom-columns=":metadata.name"); do
-    kubectl rollout status deployment ${deployment} -n ${namespace}
+  for deployment in $(kubectl get deploy -n ${namespace} -o custom-columns=":metadata.name"); do
+    kubectl rollout status deploy ${deployment} -n ${namespace}
   done
 done
