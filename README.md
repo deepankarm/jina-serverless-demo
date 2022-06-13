@@ -31,6 +31,8 @@ Knative allows us to scale from 0 to N, based on.
 - We can set min / max number of replicas per deployment.
 - It also supports HPA (CPU based 1-to-N scaling provided by K8S)
 
+## Demo
+
 ### Set-up
 
 > You can skip this step if you already have a k8s cluster & setup knative / linkerd components.
