@@ -128,7 +128,7 @@ Client(host=host).post('/', inputs=DocumentArray.empty(2))
 We can observe new replicas popping up for both `gateway` & `heavy-executor` after request is sent via the Client.
 
 <p align="center">
-<a href="#"><img src="./.github/1-request.gif" alt="Scale from 0" width="70%"></a>
+<a href="#"><img src="./.github/1-request.gif" alt="Scale from 0" width="80%"></a>
 </p>
 
 Now, let's start 10 concurrent Clients that will send requests to the Gateway.
@@ -143,5 +143,5 @@ Note the following.
 - After a cool down period, all deployments reach the original state of 0 replicas each.
 
 <p align="center">
-<a href="#"><img src="./.github/scale-to-10.gif" alt="Scale to 10" width="70%"></a>
+<a href="#"><img src="./.github/scale-to-10.gif" alt="Scale to 10" width="80%"></a>
 </p>
